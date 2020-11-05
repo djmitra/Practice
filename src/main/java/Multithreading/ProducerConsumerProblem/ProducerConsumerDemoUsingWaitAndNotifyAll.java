@@ -1,4 +1,4 @@
-package main.java.Multithreading;
+package main.java.Multithreading.ProducerConsumerProblem;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package main.java.Multithreading;
+package main.java.Multithreading.ProducerConsumerProblem;
 
 import java.util.List;
 
@@ -34,7 +34,7 @@ class Producer implements Runnable
     {
         synchronized (taskQueue)
         {
-            while (taskQueue.size() == MAX_CAPACITY)
+            if (taskQueue.size() == MAX_CAPACITY)
             {
                 System.out.println("Queue is full " + Thread.currentThread().getName() + " is waiting, size: " + taskQueue.size());
                 taskQueue.wait();

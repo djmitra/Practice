@@ -1,11 +1,19 @@
 package main.java.ArraysExample;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class ArrayTestMethods {
 
     public static void main(String args[]) {
+
+        // Arrays.asList() example
+
+        List<Integer> list = Arrays.asList(1,2,3,4);
+        List<Integer> list1 = list.stream().filter(i -> i==0).collect(Collectors.toList());
+        System.out.println(list1);
 
         int[] arr = {2, 4, 9, 5, 1, 6};
 

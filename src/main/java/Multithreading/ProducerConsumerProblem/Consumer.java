@@ -1,4 +1,4 @@
-package main.java.Multithreading;
+package main.java.Multithreading.ProducerConsumerProblem;
 
 import java.util.List;
 
@@ -30,7 +30,7 @@ class Consumer implements Runnable
     {
         synchronized (taskQueue)
         {
-            while (taskQueue.isEmpty())
+            if (taskQueue.isEmpty())
             {
                 System.out.println("Queue is empty " + Thread.currentThread().getName() + " is waiting, size: " + taskQueue.size());
                 taskQueue.wait();
