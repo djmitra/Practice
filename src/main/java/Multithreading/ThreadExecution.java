@@ -5,8 +5,6 @@ class MyThread extends Thread {
     MyThread() {
     }
 
-    ;
-
     MyThread(Runnable r) {
         super(r);
     }
