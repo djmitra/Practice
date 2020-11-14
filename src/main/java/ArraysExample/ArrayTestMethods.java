@@ -9,11 +9,12 @@ public class ArrayTestMethods {
 
     public static void main(String args[]) {
 
-        // Arrays.asList() example
+        List<Integer> intList = Arrays.asList(1, 2, 3, 4);
 
-        List<Integer> list = Arrays.asList(1,2,3,4);
-        List<Integer> list1 = list.stream().filter(i -> i==0).collect(Collectors.toList());
-        System.out.println(list1);
+        Integer[] intArray = new Integer[intList.size()];
+        intArray = intList.toArray(intArray);
+
+        System.out.println(Arrays.toString(intArray));
 
         int[] arr = {2, 4, 9, 5, 1, 6};
 
@@ -51,7 +52,7 @@ public class ArrayTestMethods {
 
         Integer num = 12345;
 
-        int[] newArr = Integer.toString(num).chars().map(c -> c-'0').toArray();
+        int[] newArr = num.toString().chars().map(c -> c-'0').toArray();
 
         System.out.println(Arrays.toString(newArr));
 
@@ -62,5 +63,23 @@ public class ArrayTestMethods {
         // It's important to differentiate between the character value and
         // the integer value that it represents as a digit.
         // That's the simplest way to get from '0', '1', '2' etc to the integer representations of those digits.
+
+        // Shallow vs Deep Copy ... TODO
+
+        int[] ar1 = {1, 2, 3};
+        int[] ar2 = ar1.clone();
+        if(ar1 == ar2)
+            System.out.println("Reference are same");
+
+        // Comparing arrays
+        int[] a1 = {1, 2, 3};
+        int[] a2 = {1, 2, 3};
+        if(a1 == a2)
+            System.out.println("Reference are same");
+        if(Arrays.equals(a1, a2))
+            System.out.println("Values are same");
+
+        // For Deep Comparing
+        // Arrays.deepEquals(obj1, obj2);
     }
 }
