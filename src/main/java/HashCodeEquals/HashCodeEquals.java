@@ -35,8 +35,7 @@ public class HashCodeEquals {
 
         System.out.println(s3.equals(s4));
 
-        System.out.println(map.get(s3).toString());
-        System.out.println(map.get(s4).toString());
+        System.out.println(map);
 
     }
 }
