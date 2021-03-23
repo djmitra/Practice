@@ -31,7 +31,7 @@ public class ConcurrentHashSetDemo {
         // you can also use keySet(defaultValue) method to add element into Set
         concurrentSet = certificationCosts.keySet(123);
         concurrentSet.add("Spring enterprise"); // value will be 123 but no error
-        System.out.println("after adding element into concurrent HashSet: " + concurrentSet);
+        System.out.println("after adding element into concurrent set: " + concurrentSet);
 
     }
 }
